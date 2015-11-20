@@ -61,7 +61,7 @@ body {
 
     .counter {
       text-align: center;
-      font-size: 4em;
+      font-size: 3em;
     }
 
     .dial {
@@ -79,8 +79,12 @@ body {
       z-index: 5;
     }
 
-    .middle-circle, .dial{
-      animation: spin 4s infinite linear;
+    .middle-circle {
+      animation: spin 4s infinite linear ;
+    }
+    .reverse {
+      animation-direction:reverse;
+      transform:scaleX(-1);
     }
 
       @-webkit-keyframes spin {
