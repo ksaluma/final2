@@ -74,17 +74,12 @@ body {
       height: 8px;
       border-radius: 20px;
       background:#969696;
-      animation-name: spin;
       transform-origin:0px;
-      animation-duration:4s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
 /*animating through css*/
-
       z-index: 5;
     }
 
-    .middle-circle{
+    .middle-circle, .dial{
       animation: spin 4s infinite linear;
     }
 
