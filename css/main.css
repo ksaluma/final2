@@ -1,0 +1,99 @@
+body {
+  background-color: grey;
+  font-family: Helvetica;
+  color: white;
+}
+
+    .highscore {
+      font-size: 2em;
+    }
+    
+    .title {
+      text-align: center;
+      font-size: 3em;
+    }
+
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 300px;
+  height: 300px;
+  z-index: 9;
+  position: relative;
+}
+
+    .outer-circle{
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: #eee;
+      border: 3px solid #969696;
+      z-index: 1;
+    }
+
+    .middle-circle{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 210px;
+      height: 210px;
+      margin-left: -102px;
+      margin-top: -102px;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9cfcb2), color-stop(100%, #06df38));
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    .inner-circle{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -57px;
+      margin-top: -57px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #eee;
+      z-index: 4;
+    }
+
+    .counter {
+      text-align: center;
+      font-size: 4em;
+    }
+
+    .dial {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: auto;
+      margin-top: auto;
+      width:140px;
+      height: 8px;
+      border-radius: 20px;
+      background:#969696;
+      animation-name: spin;
+      transform-origin:0px;
+      animation-duration:4s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+/*animating through css*/
+
+      z-index: 5;
+    }
+
+    .middle-circle{
+      animation: spin 4s infinite linear;
+    }
+
+      @-webkit-keyframes spin {
+        0% {
+          transform: rotateZ(0deg);
+        }
+        100% {
+          transform: rotateZ(360deg);
+        }
+    }
+/*animating through css*/
