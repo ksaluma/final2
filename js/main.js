@@ -23,3 +23,6 @@ var numofclicks = 0;
 
 	});
 
+
+// CANT FIGURE OUT HOW TO RANDOMIZE DOTS
+

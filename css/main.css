@@ -1,16 +1,17 @@
 body {
-  background-color: grey;
-  font-family: Helvetica;
+  background-color: black;
+  font-family: ROBOTECH GP;
   color: white;
+  margin: 1em;
 }
 
     .highscore {
-      font-size: 2em;
+      font-size: 3em;
     }
     
     .title {
       text-align: center;
-      font-size: 3em;
+      font-size: 5em;
     }
 
 .container{
@@ -29,7 +30,7 @@ body {
       height: 300px;
       border-radius: 50%;
       background-color: #eee;
-      border: 3px solid #969696;
+      border: 3px solid #06df38;
       z-index: 1;
     }
 
@@ -37,12 +38,13 @@ body {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 210px;
-      height: 210px;
-      margin-left: -102px;
-      margin-top: -102px;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9cfcb2), color-stop(100%, #06df38));
+      width: 250px;
+      height: 250px;
+      margin-left: -125px;
+      margin-top: -125px;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #059426), color-stop(100%, #06df38));
       border-radius: 50%;
+      border: 3px solid #06df38;
       z-index: 2;
     }
 
@@ -50,8 +52,8 @@ body {
       position: absolute;
       top: 50%;
       left: 50%;
-      margin-left: -57px;
-      margin-top: -57px;
+      margin-left: -56px;
+      margin-top: -56px;
       width: 120px;
       height: 120px;
       border-radius: 50%;
@@ -60,23 +62,44 @@ body {
     }
 
     .counter {
+      font-family: Helvetica;
       text-align: center;
-      font-size: 3em;
+      font-size: 2.5em;
+    }
+
+    .vertical {
+      position: absolute;
+      top: 50%;
+      width:306px;
+      height: 4px;
+      border-radius: 20px;
+      background: #06df38;
+      z-index: 6;
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+
+    .horizontal {
+      position: absolute;
+      top: 50%;
+      width:306px;
+      height: 4px;
+      border-radius: 20px;
+      background: #06df38;
+      z-index: 6;
     }
 
     .dial {
       position: absolute;
       top: 50%;
-      left: 50%;
-      margin-left: auto;
-      margin-top: auto;
+      left: 51%;
       width:140px;
-      height: 8px;
+      height: 4px;
       border-radius: 20px;
-      background:#969696;
+      background: black;
       transform-origin:0px;
 /*animating through css*/
-      z-index: 5;
+      z-index: 7;
     }
 
     .middle-circle {
