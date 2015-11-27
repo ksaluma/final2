@@ -6,7 +6,11 @@ body {
 }
 
     .highscore {
-      font-size: 2em;
+      font-size: 1.5em;
+    }
+
+    .lives {
+      font-size: 1.5em;
     }
     
     .title {
@@ -31,6 +35,17 @@ body {
       border-radius: 50%;
       background-color: #eee;
       border: 3px solid #06df38;
+      z-index: 0;
+    }
+
+    .target {
+      position: absolute;
+      top: 47%;
+      left: 51%;
+      width:150px;
+      height: 25px;
+      background: green;
+      transform-origin:0px;
       z-index: 1;
     }
 
@@ -93,7 +108,7 @@ body {
       position: absolute;
       top: 50%;
       left: 51%;
-      width:140px;
+      width:145px;
       height: 4px;
       border-radius: 20px;
       background: black;
@@ -102,7 +117,7 @@ body {
       z-index: 7;
     }
 
-    .middle-circle {
+    .middle-circle/*, .target */{
       animation: spin 4s infinite linear ;
     }
     .reverse {
