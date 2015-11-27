@@ -6,12 +6,12 @@ body {
 }
 
     .highscore {
-      font-size: 3em;
+      font-size: 2em;
     }
     
     .title {
       text-align: center;
-      font-size: 5em;
+      font-size: 3em;
     }
 
 .container{
@@ -64,7 +64,7 @@ body {
     .counter {
       font-family: Helvetica;
       text-align: center;
-      font-size: 2.5em;
+      font-size: 2em;
     }
 
     .vertical {
