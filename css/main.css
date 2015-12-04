@@ -5,6 +5,16 @@ body {
   margin: 1em;
 }
 
+
+h1 {
+  text-align: center;
+}
+
+  h1 a{
+    color: green;
+    text-decoration: none;
+  }
+
     .highscore {
       font-size: 1.5em;
     }
@@ -76,11 +86,16 @@ body {
       z-index: 4;
     }
 
-    .counter {
-      font-family: Helvetica;
+    .score {
       text-align: center;
       font-size: 2em;
+      margin-top: 20px;
     }
+
+      #count {
+      text-align: center;
+      font-size: 2em;
+      }
 
     .vertical {
       position: absolute;
