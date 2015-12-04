@@ -1,17 +1,41 @@
 var position = 0;
 var dir = 1;
+// var hscore = 0;
+var numofclicks = 0;
+var lives= 3;
+var skip = true;
+
 var rotate = function() {
-	//console.log(position);
+	//console.log(dir, Math.abs(position % 360));
 	position += 1 * dir;
 	$('.dial').css({'transform':'rotateZ('+position+'deg)'});
+	if (((dir == 1 && Math.abs(position % 360) == 6) && skip) || ((dir == -1 && Math.abs(position % 360) == 356) && skip)) {
+		skip = false;
+	}
+	else if (dir == 1 && Math.abs(position % 360) == 6 && !skip) {
+		takelife();
+	}
+	else if (dir == -1 && Math.abs(position % 360) == 356 && !skip) {
+		takelife();
+	}
 };
+
+var takelife = function() {
+	lives = (lives - 1);
+	$('#lives').text(lives);
+	if (lives <1) {
+		window.location.replace("index2.html");
+	}
+}
+
+
 
 timer = setInterval(rotate, 12);
 
 
-// var hscore = 0;
-var numofclicks = 0;
-var lives= 3;
+
+$('#lives').text(lives);
+$('#count').text(numofclicks);
 
 // $('.lives span').text(marqueeWidth);
 
@@ -23,7 +47,7 @@ var lives= 3;
 				console.log(Math.abs(position % 360), "YES")
 				dir *= -1;
 
-
+				skip = true;
 				// $('.target').css({'transform':'rotateZ(180deg)'});
 
 
@@ -35,16 +59,16 @@ var lives= 3;
 				console.log(Math.abs(position % 360), "NO")
 				// dir = 0;
 
-				lives = (lives - 1);
-				$('#lives').text(lives);
+				takelife()
 			}
 
-			if (lives <1) {
-				// alert("YOU LOSE!");
-				window.location.replace("index2.html");
-			}
 			
-		};
+			
+	};
+
+
+
+//  
 
 	// if (numofclicks >) 
 	// 	hscore = (numofclicks + 1);

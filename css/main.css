@@ -11,8 +11,9 @@ h1 {
 }
 
   h1 a{
-    color: green;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #059426), color-stop(100%, #06df38));
     text-decoration: none;
+    color: white;
   }
 
     .highscore {
