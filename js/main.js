@@ -13,6 +13,8 @@ timer = setInterval(rotate, 12);
 var numofclicks = 0;
 var lives= 3;
 
+// $('.lives span').text(marqueeWidth);
+
 
 	$('body').on('keydown', function(e){
 		console.log(e.keyCode)
@@ -21,6 +23,10 @@ var lives= 3;
 				console.log(Math.abs(position % 360), "YES")
 				dir *= -1;
 
+
+				// $('.target').css({'transform':'rotateZ(180deg)'});
+
+
 				numofclicks = (numofclicks + 1);
 				$('#count').text(numofclicks);
 			}
@@ -28,8 +34,6 @@ var lives= 3;
 			else {
 				console.log(Math.abs(position % 360), "NO")
 				// dir = 0;
-				// alert("YOU LOSE!");
-				// window.location.replace("index2.html");
 
 				lives = (lives - 1);
 				$('#lives').text(lives);
