@@ -42,6 +42,11 @@ $('#count').text(numofclicks);
 
 	$('body').on('keydown', function(e){
 		console.log(e.keyCode)
+
+		document.getElementById('radar').load();
+		document.getElementById('radar').play();
+
+
 		if(e.keyCode == 32){
 			if (Math.abs(position % 360) >= 356 || Math.abs(position % 360) <= 5) {
 				console.log(Math.abs(position % 360), "YES")
@@ -61,7 +66,7 @@ $('#count').text(numofclicks);
 
 				// $('.middle-circle').addClass('red');
 
-				$(".middle-circle").addClass("red").delay(250).queue(function(next){
+				$(".middle-circle").addClass("red").delay(200).queue(function(next){
 				    $(this).removeClass("red");
 				    next();
 				});
