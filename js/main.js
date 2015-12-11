@@ -59,6 +59,14 @@ $('#count').text(numofclicks);
 				console.log(Math.abs(position % 360), "NO")
 				// dir = 0;
 
+				// $('.middle-circle').addClass('red');
+
+				$(".middle-circle").addClass("red").delay(250).queue(function(next){
+				    $(this).removeClass("red");
+				    next();
+				});
+
+
 				takelife()
 			}
 
