@@ -1,5 +1,9 @@
 body {
-  background-color: black;
+  background: url('../img/radar.png') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-family: ROBOTECH GP;
   color: white;
   margin: 1em;
@@ -68,7 +72,7 @@ h1 {
       height: 250px;
       margin-left: -125px;
       margin-top: -125px;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #059426), color-stop(100%, #06df38));
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #024a13), color-stop(100%, #06df38));
       border-radius: 50%;
       border: 3px solid #06df38;
       z-index: 2;
