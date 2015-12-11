@@ -28,6 +28,21 @@ var takelife = function() {
 	}
 }
 
+var rot;
+var top;
+var bottom;
+var setposition = function() {
+	rot = Math.ceil(Math.random() * 360);
+	
+	top = rot - 4;
+	if (top < 0) top = top + 360;
+	
+	bottom = (rot + 5) % 360;
+
+	$('.target').css('transform','rotate('+rot+'deg)');
+
+};
+setposition();
 
 
 timer = setInterval(rotate, 12);
@@ -48,7 +63,7 @@ $('#count').text(numofclicks);
 
 
 		if(e.keyCode == 32){
-			if (Math.abs(position % 360) >= 356 || Math.abs(position % 360) <= 5) {
+			if (Math.abs(position % 360) >= top || Math.abs(position % 360) <= bottom) {
 				console.log(Math.abs(position % 360), "YES")
 				dir *= -1;
 
@@ -58,6 +73,8 @@ $('#count').text(numofclicks);
 
 				numofclicks = (numofclicks + 1);
 				$('#count').text(numofclicks);
+
+				setposition();
 			}
 
 			else {
