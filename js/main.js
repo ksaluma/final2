@@ -12,12 +12,12 @@ var rotate = function() {
 	if (((dir == 1 && Math.abs(position % 360) == 6) && skip) || ((dir == -1 && Math.abs(position % 360) == 356) && skip)) {
 		skip = false;
 	}
-	else if (dir == 1 && Math.abs(position % 360) == 6 && !skip) {
-		takelife();
-	}
-	else if (dir == -1 && Math.abs(position % 360) == 356 && !skip) {
-		takelife();
-	}
+	// else if (dir == 1 && Math.abs(position % 360) == 6 && !skip) {
+	// 	takelife();
+	// }
+	// else if (dir == -1 && Math.abs(position % 360) == 356 && !skip) {
+	// 	takelife();
+	// }
 };
 
 var takelife = function() {
@@ -29,14 +29,12 @@ var takelife = function() {
 }
 
 
-timer = setInterval(rotate, 12);
+timer = setInterval(rotate, 11);
 
 
 
 $('#lives').text(lives);
 $('#count').text(numofclicks);
-
-// $('.lives span').text(marqueeWidth);
 
 
 	$('body').on('keydown', function(e){
@@ -52,7 +50,6 @@ $('#count').text(numofclicks);
 				dir *= -1;
 
 				skip = true;
-				// $('.target').css({'transform':'rotateZ(180deg)'});
 
 
 				numofclicks = (numofclicks + 1);
@@ -62,9 +59,6 @@ $('#count').text(numofclicks);
 
 			else {
 				console.log(Math.abs(position % 360), "NO")
-				// dir = 0;
-
-				// $('.middle-circle').addClass('red');
 
 				$(".middle-circle").addClass("red").delay(200).queue(function(next){
 				    $(this).removeClass("red");
@@ -75,9 +69,29 @@ $('#count').text(numofclicks);
 				takelife()
 			}
 
+
+	if ( numofclicks == 5 ) {
+		clearInterval(timer);
+		timer = setInterval(rotate, 8);
+	}
+
+	if ( numofclicks == 10 ) {
+		clearInterval(timer);
+		timer = setInterval(rotate, 7);
+	}
+
+	if  ( numofclicks == 15 ) {
+		clearInterval(timer);
+		timer = setInterval(rotate, 6);
+	}
+
+
+
 			
 			
 	};
+
+
 
 
 
